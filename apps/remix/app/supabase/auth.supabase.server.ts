@@ -69,3 +69,16 @@ export const isUserLoggedIn = async (
 
   return !!user;
 };
+
+export const getSession = async (
+  request: Request,
+  c: AppLoadContext,
+) => {
+  const supabase = createSupabaseServerClient(request, c);
+
+  const {
+    data: { session },
+  } = await supabase.client.auth.getSession();
+  
+  return session ?? null;
+};

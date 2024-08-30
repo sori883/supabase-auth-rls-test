@@ -13,6 +13,10 @@ export function createSupabaseServerClient(request: Request, c:AppLoadContext) {
       c.cloudflare.env.SUPABASE_URL,
       c.cloudflare.env.SUPABASE_ANON_KEY,
     {
+      auth: {
+        detectSessionInUrl: true,
+        flowType: "pkce",
+      },
       cookies: {
         getAll() {
           return parseCookieHeader(request.headers.get("Cookie") ?? "");

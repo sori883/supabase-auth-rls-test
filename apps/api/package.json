@@ -7,7 +7,7 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
+    "dev": "wrangler dev src/index.ts --port 3100",
     "worker:deploy": "wrangler deploy --minify src/index.ts",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",

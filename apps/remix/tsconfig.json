@@ -1,0 +1,14 @@
+{
+  "extends": "@acme/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
+    },
+    "jsx": "react-jsx",
+    "forceConsistentCasingInFileNames": true,
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

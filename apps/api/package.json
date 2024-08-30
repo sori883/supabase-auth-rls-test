@@ -1,0 +1,31 @@
+{
+  "name": "@acme/api",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "worker:deploy": "wrangler deploy --minify src/index.ts",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.5.9"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:^",
+    "@acme/prettier-config": "workspace:^",
+    "@acme/tailwind-config": "workspace:^",
+    "@acme/tsconfig": "workspace:^",
+    "@cloudflare/workers-types": "^4.20240821.1",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "wrangler": "^3.72.3"
+  },
+  "prettier": "@acme/prettier-config"
+}

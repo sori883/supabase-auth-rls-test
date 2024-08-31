@@ -1,0 +1,2 @@
+CORS_ORIGIN=http://localhost:3000
+SUPABASE_JWT_SECRET_KEY=your_jwt_secret

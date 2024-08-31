@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1725115389507,
+      "tag": "0000_magical_the_hunter",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1725116923825,
+      "tag": "0001_fantastic_epoch",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1725123171956,
+      "tag": "0002_heavy_hitman",
+      "breakpoints": true
+    }
+  ]
+}

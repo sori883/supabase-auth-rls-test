@@ -1,0 +1,53 @@
+{
+  "name": "@acme/web",
+  "version": "1.0.0",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "remix vite:build",
+    "deploy": "wrangler pages deploy ./build/client",
+    "dev": "remix vite:dev",
+    "lint": "eslint",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "start": "wrangler pages dev ./build/client",
+    "typecheck": "tsc --noEmit",
+    "typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@remix-run/cloudflare": "^2.11.2",
+    "@remix-run/cloudflare-pages": "^2.11.2",
+    "@remix-run/react": "^2.11.2",
+    "@supabase/ssr": "^0.5.1",
+    "@supabase/supabase-js": "^2.45.2",
+    "hono": "^4.5.9",
+    "isbot": "^4.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@acme/api": "workspace:^",
+    "@acme/db": "workspace:^",
+    "@acme/eslint-config": "workspace:^",
+    "@acme/prettier-config": "workspace:^",
+    "@acme/tailwind-config": "workspace:^",
+    "@acme/tsconfig": "workspace:^",
+    "@cloudflare/workers-types": "^4.20240821.1",
+    "@remix-run/dev": "^2.11.2",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.19",
+    "eslint": "catalog:",
+    "postcss": "^8.4.38",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "^5.1.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "wrangler": "^3.72.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "prettier": "@acme/prettier-config"
+}

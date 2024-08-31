@@ -1,0 +1,43 @@
+{
+  "name": "@acme/db",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts"
+  },
+  "scripts": {
+    "sb:start": "supabase start",
+    "sb:stop": "supabase stop",
+    "sb:reset": "supabase db reset",
+    "sb:push": "supabase db push",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
+    "lint": "eslint",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e .env --"
+  },
+  "dependencies": {
+    "dotenv-cli": "^7.4.2",
+    "drizzle-orm": "^0.33.0",
+    "postgres": "^3.4.4"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:^",
+    "@acme/prettier-config": "workspace:^",
+    "@acme/tailwind-config": "workspace:^",
+    "@acme/tsconfig": "workspace:^",
+    "drizzle-kit": "^0.24.2",
+    "eslint": "catalog:",
+    "supabase": "^1.191.3",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "prettier": "@acme/prettier-config"
+}
